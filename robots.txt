@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://polarconsultinggroup.com/sitemap.xml
