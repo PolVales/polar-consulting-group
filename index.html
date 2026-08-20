@@ -30,7 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Polar Consulting Group","description":"Technology consulting across Europe. Expert in AI, web development, CRM, lead generation and marketing for businesses throughout Europe. Clear strategy, flawless execution and measurable results. Based in Barcelona, working remotely across the continent.","url":"https://polarconsultinggroup.com/","email":"info@polarconsultinggroup.com","image":"https://polarconsultinggroup.com/og-image.png","logo":"https://polarconsultinggroup.com/logo.png","priceRange":"€€","inLanguage":"en","areaServed":[{"@type":"Place","name":"Europe"},{"@type":"Country","name":"Spain"},{"@type":"Country","name":"France"},{"@type":"Country","name":"Germany"},{"@type":"Country","name":"Netherlands"},{"@type":"Country","name":"Italy"},{"@type":"Country","name":"Portugal"},{"@type":"Country","name":"Ireland"},{"@type":"Country","name":"United Kingdom"},{"@type":"Country","name":"Switzerland"}],"address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Catalunya","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":41.3874,"longitude":2.1686},"availableLanguage":["ca","es","en"],"knowsAbout":["Intel·ligència Artificial","Desenvolupament web","CRM","Captació de clients","Màrqueting digital","Automatització"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Serveis","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Artificial Intelligence","description":"Custom agents, automations and models that get work done and give you real time back."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Web Development","description":"Fast, modern websites built to convert. Top-tier design and code."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRM & Data","description":"Your data organized, connected and working so you sell more and better."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Lead Generation","description":"Lead engines that fill your pipeline with real opportunities."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Marketing","description":"Campaigns with judgment, rigorous measurement and a return you can defend."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automation","description":"Processes that run themselves — no friction, no manual errors."}}]}}</script>
 <style>
-  :root{--ink:#0C0C0D;--ink2:#141416;--surf:#181819;--line:rgba(247,245,241,.10);--bone:#F7F5F1;--stone:#9A9893;--stone2:#6E6C68;--gold:#F2C014;--r:14px;--maxw:1180px}
+  :root{--ink:#0C0C0D;--ink2:#141416;--surf:#181819;--line:rgba(247,245,241,.10);--bone:#F7F5F1;--stone:#9A9893;--stone2:#6E6C68;--gold:#fff200;--r:14px;--maxw:1180px}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{background:var(--ink);color:var(--bone);font-family:'Archivo',system-ui,sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -53,6 +53,7 @@
   .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px}
   .brand{font-weight:800;font-size:21px;letter-spacing:-.02em}
   .brand span{color:var(--gold)}
+  .brand-img{height:22px;display:block}
   .nav-right{display:flex;align-items:center;gap:14px}
   .lang{display:flex;gap:8px;font-size:12px;font-weight:600;letter-spacing:.04em}
   .lang a{color:var(--stone2)}
@@ -62,7 +63,7 @@
   .nav-links a.lnk:hover{color:var(--bone)}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:14px;padding:12px 20px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:transform .15s,background .25s,color .25s;font-family:inherit}
   .btn-gold{background:var(--gold);color:#1a1500}
-  .btn-gold:hover{background:#ffd02a}
+  .btn-gold:hover{background:#ffff5c}
   .btn-ghost{border-color:var(--line);color:var(--bone)}
   .btn-ghost:hover{border-color:var(--bone)}
   .btn-wa{background:#25D366;color:#06351c}
@@ -106,8 +107,8 @@
   .rv.in{opacity:1;transform:none}
   .svc-grid{display:grid;grid-template-columns:1fr;gap:16px}
   .svc{position:relative;padding:30px 26px 34px;border:1px solid var(--line);border-radius:var(--r);background:var(--ink2);overflow:hidden;transition:transform .35s,border-color .35s}
-  .svc::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 200px at var(--mx,50%) var(--my,0%),rgba(242,192,20,.12),transparent 70%);opacity:0;transition:opacity .4s}
-  .svc:hover{transform:translateY(-6px);border-color:rgba(242,192,20,.45)}
+  .svc::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 200px at var(--mx,50%) var(--my,0%),rgba(255,242,0,.12),transparent 70%);opacity:0;transition:opacity .4s}
+  .svc:hover{transform:translateY(-6px);border-color:rgba(255,242,0,.45)}
   .svc:hover::before{opacity:1}
   .svc .ico{font-size:24px;line-height:1;color:var(--bone)}
   .svc h3{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:16px 0 10px}
@@ -129,11 +130,12 @@
   .cta-final h2{font-weight:800;letter-spacing:-.035em;line-height:1.02;font-size:clamp(36px,9vw,86px)}
   .cta-final p{color:var(--stone);max-width:520px;margin:20px auto 0;font-size:16px}
   .cta-final .cta{display:flex;gap:12px;justify-content:center;margin-top:34px;flex-wrap:wrap}
-  .glow{position:absolute;width:min(560px,90vw);height:min(560px,90vw);left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(242,192,20,.15),transparent 62%);z-index:-1;pointer-events:none}
+  .glow{position:absolute;width:min(560px,90vw);height:min(560px,90vw);left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,242,0,.15),transparent 62%);z-index:-1;pointer-events:none}
   footer{border-top:1px solid var(--line);padding:46px 0 40px}
   .foot-in{display:flex;flex-direction:column;gap:28px}
   .foot-brand{font-weight:800;font-size:25px;letter-spacing:-.02em}
   .foot-brand span{color:var(--gold)}
+  .foot-img{height:26px;display:block}
   .foot-tag{color:var(--stone2);font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin-top:6px}
   .foot-col h5{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone2);margin-bottom:12px;font-weight:600}
   .foot-col{display:flex;flex-direction:column;gap:9px;font-size:14px;color:var(--stone)}
@@ -151,7 +153,7 @@
 <div id="progress"></div>
 <div id="cursor"></div>
 <div id="cursor-dot"></div>
-<nav id="nav"><div class="wrap nav-in"><a href="#top" class="brand" data-cursor>POLAR<span>.</span></a><div class="nav-right"><div class="lang" role="navigation" aria-label="Idioma"><a href="index.html" class="on" aria-current="true" hreflang="en">EN</a><a href="es.html" hreflang="es">ES</a><a href="ca.html" hreflang="ca">CA</a></div><div class="nav-links"><a href="#serveis" class="lnk" data-cursor>Services</a><a href="#proces" class="lnk" data-cursor>Process</a><a href="#maresme" class="lnk" data-cursor>Europe</a><a href="#contacte" class="lnk" data-cursor>Contact</a><a href="#contacte" class="btn btn-gold mag" data-cursor>Let’s talk</a></div><button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+<nav id="nav"><div class="wrap nav-in"><a href="#top" class="brand" data-cursor><img src="/logo-white.svg" alt="Polar Consulting Group" class="brand-img"></a><div class="nav-right"><div class="lang" role="navigation" aria-label="Idioma"><a href="index.html" class="on" aria-current="true" hreflang="en">EN</a><a href="es.html" hreflang="es">ES</a><a href="ca.html" hreflang="ca">CA</a></div><div class="nav-links"><a href="#serveis" class="lnk" data-cursor>Services</a><a href="#proces" class="lnk" data-cursor>Process</a><a href="#maresme" class="lnk" data-cursor>Europe</a><a href="#contacte" class="lnk" data-cursor>Contact</a><a href="#contacte" class="btn btn-gold mag" data-cursor>Let’s talk</a></div><button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
 <div id="mobile-menu"><a href="#serveis" class="mlnk">Services</a><a href="#proces" class="mlnk">Process</a><a href="#maresme" class="mlnk">Europe</a><a href="#contacte" class="mlnk">Contact</a><a href="#contacte" class="btn btn-gold">Let’s talk</a></div>
 <header class="hero" id="top"><canvas id="aurora" aria-hidden="true"></canvas><div class="wrap hero-in"><p class="eyebrow rv">Technology consulting · Europe</p><h1><span class="ln"><i>AI, web & data</i></span><span class="ln"><i class="gold">that work</i></span><span class="ln"><i>for you.</i></span></h1><p class="lead">Expert in AI, web development, CRM, lead generation and marketing. Clear strategy, flawless execution and results you can measure. By your side, across Europe.</p><div class="cta"><a href="#contacte" class="btn btn-gold mag" data-cursor>Book a call</a><a href="#serveis" class="btn btn-ghost mag" data-cursor>See services</a></div></div><div class="scroll-hint" aria-hidden="true"><span>Scroll</span><span class="bar"></span></div></header>
 <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Artificial Intelligence</span><span>Web Development</span><span>CRM & Data</span><span>Lead Generation</span><span>Marketing</span><span>Automation</span><span>Artificial Intelligence</span><span>Web Development</span><span>CRM & Data</span><span>Lead Generation</span><span>Marketing</span><span>Automation</span></div></div>
@@ -162,7 +164,7 @@
 <section class="cta-final" id="contacte"><div class="glow" aria-hidden="true"></div><div class="wrap"><h2 class="rv">Ready to set your <span class="gold">true north</span>?</h2><p class="rv">Tell me what you want to achieve. In a 30-minute call I’ll tell you, no fluff, how I’d approach it.</p><div class="cta rv"><a href="https://wa.me/34647069850" class="btn btn-wa mag" data-cursor><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="vertical-align:-4px"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01c-1.52 0-3.01-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg> Message us on WhatsApp</a><a href="mailto:info@polarconsultinggroup.com" class="btn btn-gold mag" data-cursor>Book a consultation</a><a href="mailto:info@polarconsultinggroup.com" class="btn btn-ghost mag" data-cursor>info@polarconsultinggroup.com</a></div></div></section>
 </main>
 <a class="wa-float" href="https://wa.me/34647069850" aria-label="WhatsApp 647 06 98 50" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="vertical-align:-4px"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01c-1.52 0-3.01-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></a>
-<footer><div class="wrap foot-in"><div><div class="foot-brand">POLAR<span>.</span></div><div class="foot-tag">Consulting Group</div></div><div class="foot-col"><h5>Navigation</h5><a href="#serveis">Services</a><a href="#proces">Process</a><a href="#maresme">Europe</a><a href="#contacte">Contact</a></div><div class="foot-col"><h5>Contact</h5><a href="mailto:info@polarconsultinggroup.com" data-cursor>info@polarconsultinggroup.com</a><a href="https://polarconsultinggroup.com">polarconsultinggroup.com</a></div></div><div class="wrap foot-note">© 2026 Polar Consulting Group · Technology consulting across Europe · AI, web, CRM, lead generation and marketing.</div></footer>
+<footer><div class="wrap foot-in"><div><div class="foot-brand"><img src="/logo-white.svg" alt="Polar Consulting Group" class="foot-img"></div><div class="foot-tag">Consulting Group</div></div><div class="foot-col"><h5>Navigation</h5><a href="#serveis">Services</a><a href="#proces">Process</a><a href="#maresme">Europe</a><a href="#contacte">Contact</a></div><div class="foot-col"><h5>Contact</h5><a href="mailto:info@polarconsultinggroup.com" data-cursor>info@polarconsultinggroup.com</a><a href="https://polarconsultinggroup.com">polarconsultinggroup.com</a></div></div><div class="wrap foot-note">© 2026 Polar Consulting Group · Technology consulting across Europe · AI, web, CRM, lead generation and marketing.</div></footer>
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -185,7 +187,7 @@
     document.querySelectorAll('.svc').forEach(function(el){el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px');});});
   }
   var canvas=document.getElementById('aurora'); if(!canvas) return; var ctx=canvas.getContext('2d');
-  var W,H,DPR,blobs=[],stars=[],pal=[[242,192,20],[201,158,8],[120,150,200],[230,225,215]];
+  var W,H,DPR,blobs=[],stars=[],pal=[[255,242,0],[220,209,0],[120,150,200],[230,225,215]];
   function size(){DPR=Math.min(window.devicePixelRatio||1,2);W=canvas.clientWidth=canvas.offsetWidth;H=canvas.clientHeight=canvas.offsetHeight;canvas.width=W*DPR;canvas.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
   function init(){var nb=W<700?4:5;blobs=[];for(var i=0;i<nb;i++){var c=pal[i%pal.length];blobs.push({x:Math.random()*W,y:Math.random()*H,r:Math.max(W,H)*(0.28+Math.random()*0.22),vx:(Math.random()-.5)*0.18,vy:(Math.random()-.5)*0.18,c:c,a:0.15+Math.random()*0.12});}
     stars=[];var n=Math.min(W<700?80:150,Math.floor(W*H/9000));for(var j=0;j<n;j++){stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+0.3,s:Math.random()*0.25+0.04,t:Math.random()*Math.PI*2,tw:Math.random()*0.02+0.005});}}
