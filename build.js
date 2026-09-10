@@ -32,7 +32,7 @@ const T = {
   ca: {
     htmllang:'ca', skip:'Salta al contingut',
     nav:['Serveis','Procés','Europa','Contacte'], navcta:'Parlem-ne', menu:'Menú',
-    eyebrow:'Consultoria tecnològica · Europa',
+    eyebrow:'Consultoria tecnològica · Europa', badge:'Idees humanes.<br>Sistemes intel·ligents.',
     h1a:'IA, web i dades', h1b:'que treballen', h1c:'per tu.',
     lead:'Expert en IA, desenvolupament web, CRM, captació i màrqueting. Estratègia clara, execució impecable i resultats que es mesuren. Al teu costat, arreu d’Europa.',
     cta1:'Reserva una trucada', cta2:'Veure serveis', down:'Avall',
@@ -68,7 +68,7 @@ const T = {
   es: {
     htmllang:'es', skip:'Saltar al contenido',
     nav:['Servicios','Proceso','Europa','Contacto'], navcta:'Hablemos', menu:'Menú',
-    eyebrow:'Consultoría tecnológica · Europa',
+    eyebrow:'Consultoría tecnológica · Europa', badge:'Ideas humanas.<br>Sistemas inteligentes.',
     h1a:'IA, web y datos', h1b:'que trabajan', h1c:'por ti.',
     lead:'Experto en IA, desarrollo web, CRM, captación y marketing. Estrategia clara, ejecución impecable y resultados que se miden. A tu lado, en toda Europa.',
     cta1:'Reservar una llamada', cta2:'Ver servicios', down:'Scroll',
@@ -104,7 +104,7 @@ const T = {
   en: {
     htmllang:'en', skip:'Skip to content',
     nav:['Services','Process','Europe','Contact'], navcta:'Let’s talk', menu:'Menu',
-    eyebrow:'Technology consulting · Europe',
+    eyebrow:'Technology consulting · Europe', badge:'Human ideas.<br>Smart systems.',
     h1a:'AI, web & data', h1b:'that work', h1c:'for you.',
     lead:'Expert in AI, web development, CRM, lead generation and marketing. Clear strategy, flawless execution and results you can measure. By your side, across Europe.',
     cta1:'Book a call', cta2:'See services', down:'Scroll',
@@ -260,6 +260,32 @@ const STYLE = `
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero h1 .ln i{transform:none}.hero p.lead,.hero .cta,.rv{opacity:1;transform:none}}
 `;
 
+const LIGHT_STYLE = `
+  :root{--ink:#18312d;--ink2:#fff;--surf:#fff;--line:rgba(24,49,45,.13);--bone:#18312d;--stone:#5d6c68;--stone2:#7b8985;--gold:#F5CF00;--sky:#9dd9f3;--coral:#ff8068;--cream:#f8f5ed;--r:24px;--maxw:1240px}
+  body{background:var(--cream);color:var(--ink);font-family:'Manrope',system-ui,sans-serif}
+  .wrap{padding-left:22px;padding-right:22px}.eyebrow{color:var(--ink);font-weight:800;letter-spacing:.18em}
+  #cursor,#cursor-dot,#aurora,.scroll-hint{display:none!important}#progress{height:4px}
+  nav{padding:20px 0}nav.scrolled{padding:12px 0;background:rgba(248,245,237,.88);border-color:var(--line)}
+  .brand-img{height:28px}.lang a{color:#78827f}.lang a.on{color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:4px;text-underline-offset:5px}
+  .nav-links a.lnk{color:var(--ink)}.nav-links a.lnk:hover{color:#000}.menu-btn span{background:var(--ink)}
+  #mobile-menu{background:var(--cream)}#mobile-menu a.mlnk{color:var(--ink)}
+  .btn{border-radius:999px;padding:13px 22px}.btn-gold{color:var(--ink);box-shadow:0 5px 0 var(--ink)}.btn-gold:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--ink)}
+  .btn-ghost{border-color:var(--ink);color:var(--ink);background:rgba(255,255,255,.6)}
+  .hero{min-height:auto;padding:132px 0 72px}.hero::after{display:none}.hero-in{padding:0;display:grid;gap:46px;align-items:center}
+  .hero-copy{position:relative;z-index:2}.hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(52px,8vw,108px);line-height:.92;letter-spacing:-.045em;margin-top:24px}.hero h1 .gold{color:var(--ink);position:relative;display:inline-block}.hero h1 .gold:after{content:"";position:absolute;left:-2%;right:-2%;bottom:.04em;height:.18em;background:var(--gold);z-index:-1;border-radius:10px;transform:rotate(-1deg)}
+  .hero p.lead{color:var(--stone);font-size:18px;max-width:580px}.hero-visual{position:relative;min-height:430px}.hero-photo{width:100%;height:100%;min-height:430px;object-fit:cover;border-radius:42% 42% 18px 18px;box-shadow:18px 18px 0 var(--gold)}
+  .hero-badge{position:absolute;left:-18px;bottom:28px;width:126px;height:126px;border-radius:50%;background:var(--coral);display:grid;place-items:center;text-align:center;font-size:13px;font-weight:800;line-height:1.25;transform:rotate(-8deg);border:3px solid var(--cream)}
+  .ticker{background:var(--sky);border:0;padding:16px 0;transform:rotate(-1deg);width:102%;margin-left:-1%}.ticker-track span{color:var(--ink);font-weight:800}
+  section.block{padding:94px 0}.sec-head h2,.maresme h2,.cta-final h2{font-family:'DM Serif Display',serif;font-weight:400;letter-spacing:-.035em}.sec-head h2{font-size:clamp(42px,6vw,72px)}.sec-head p{color:var(--stone)}
+  .svc-grid{gap:18px}.svc{border:0;background:#fff;padding:32px;border-radius:var(--r);box-shadow:0 12px 32px rgba(24,49,45,.06)}.svc:nth-child(2),.svc:nth-child(5){background:#eaf7fc}.svc:nth-child(3),.svc:nth-child(6){background:#fff1ec}.svc:hover{border:0;transform:translateY(-7px) rotate(.5deg)}.svc::before{display:none}.svc .ico{color:var(--ink);width:48px;height:48px;border-radius:16px;background:var(--gold);display:grid;place-items:center}.svc h3{font-size:21px}.svc p{color:var(--stone)}
+  #proces{background:var(--sky)!important}.proc{gap:14px}.step{border:0!important;background:rgba(255,255,255,.72);padding:28px;border-radius:22px}.step .pnum{color:var(--ink);-webkit-text-stroke:0;font-size:28px}.step:hover .pnum{color:var(--coral);-webkit-text-stroke:0}
+  .maresme{background:#fff;padding:100px 0}.people-band{display:grid;gap:40px;align-items:center}.people-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px 90px 24px 24px}.town{border-color:var(--ink);color:var(--ink);background:#fff}.town.more{color:var(--ink)}
+  .cta-final{margin:30px 18px 70px;padding:90px 0;background:var(--gold);border-radius:34px}.cta-final p{color:var(--ink)}.cta-final .btn-gold{background:var(--ink);color:#fff;box-shadow:none}.cta-final .btn-ghost{background:transparent}.glow{display:none}
+  footer{background:var(--ink);color:#fff;border:0}.foot-col,.foot-note,.foot-tag{color:#b9c4c1}.foot-img{filter:none}.wa-float{box-shadow:0 8px 24px rgba(24,49,45,.24)}
+  @media(min-width:820px){.hero-in{grid-template-columns:1.05fr .95fr}.hero{padding:145px 0 92px}.hero-visual{height:600px}.hero-photo{min-height:600px}.people-band{grid-template-columns:.9fr 1.1fr}.cta-final{margin-left:32px;margin-right:32px}.step{padding:30px 25px}.proc{gap:14px}.sec-head{align-items:start}}
+  @media(max-width:819px){.hero h1 .ln i{transform:none!important}.hero-visual{order:-1;min-height:360px}.hero-photo{min-height:360px}.hero-badge{left:6px}.hero{padding-top:105px}.cta-final{margin-left:10px;margin-right:10px}.brand-img{height:23px}}
+`;
+
 const SCRIPT = `
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -341,7 +367,7 @@ function page(lang){
   '<title>'+m.title+'</title>\n'+
   '<meta name="description" content="'+m.desc+'">\n'+
   '<link rel="canonical" href="'+URLS[lang]+'">\n'+altLinks()+'\n'+
-  '<meta name="theme-color" content="#0C0C0D">\n'+
+  '<meta name="theme-color" content="#F8F5ED">\n'+
   '<link rel="icon" type="image/svg+xml" href="/favicon.svg">\n'+
   '<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">\n'+
   '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'+
@@ -357,13 +383,13 @@ function page(lang){
   '<meta name="twitter:description" content="'+m.desc+'">\n'+
   '<meta name="twitter:image" content="'+BASE+'/og-image.png">\n'+
   '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'+
-  '<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">\n'+
+  '<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n'+
   '<script type="application/ld+json">'+ld(lang)+'</'+'script>\n'+
-  '<style>'+STYLE+'</style>\n</head>\n<body>\n'+
+  '<style>'+STYLE+LIGHT_STYLE+'</style>\n</head>\n<body>\n'+
   '<a href="#main" class="skip">'+t.skip+'</a>\n'+
   '<div id="progress"></div>\n<div id="cursor"></div>\n<div id="cursor-dot"></div>\n'+
   '<nav id="nav"><div class="wrap nav-in">'+
-    '<a href="#top" class="brand" data-cursor><img src="/logo-white.svg" alt="Polar Consulting Group" class="brand-img"></a>'+
+    '<a href="#top" class="brand" data-cursor><img src="/logo-dark.svg" alt="Polar Consulting Group" class="brand-img"></a>'+
     '<div class="nav-right">'+
       '<div class="lang" role="navigation" aria-label="Idioma">'+langSwitch(lang)+'</div>'+
       '<div class="nav-links">'+navLinks+'<a href="#contacte" class="btn btn-gold mag" data-cursor>'+t.navcta+'</a></div>'+
@@ -371,17 +397,17 @@ function page(lang){
     '</div></div></nav>\n'+
   '<div id="mobile-menu">'+mLinks+'<a href="#contacte" class="btn btn-gold">'+t.navcta+'</a></div>\n'+
   '<header class="hero" id="top"><canvas id="aurora" aria-hidden="true"></canvas>'+
-    '<div class="wrap hero-in"><p class="eyebrow rv">'+t.eyebrow+'</p>'+
+    '<div class="wrap hero-in"><div class="hero-copy"><p class="eyebrow rv">'+t.eyebrow+'</p>'+
     '<h1><span class="ln"><i>'+t.h1a+'</i></span><span class="ln"><i class="gold">'+t.h1b+'</i></span><span class="ln"><i>'+t.h1c+'</i></span></h1>'+
     '<p class="lead">'+t.lead+'</p>'+
-    '<div class="cta"><a href="#contacte" class="btn btn-gold mag" data-cursor>'+t.cta1+'</a><a href="#serveis" class="btn btn-ghost mag" data-cursor>'+t.cta2+'</a></div></div>'+
+    '<div class="cta"><a href="#contacte" class="btn btn-gold mag" data-cursor>'+t.cta1+'</a><a href="#serveis" class="btn btn-ghost mag" data-cursor>'+t.cta2+'</a></div></div><div class="hero-visual"><img src="/team-barcelona.jpg" alt="A collaborative technology team working together in Barcelona" class="hero-photo" width="1536" height="1024"><div class="hero-badge">'+t.badge+'</div></div></div>'+
     '<div class="scroll-hint" aria-hidden="true"><span>'+t.down+'</span><span class="bar"></span></div></header>\n'+
   '<div class="ticker" aria-hidden="true"><div class="ticker-track">'+ticker+'</div></div>\n'+
   '<main id="main">\n'+
   '<section class="block" id="serveis"><div class="wrap"><div class="sec-head"><h2 class="rv">'+t.svc_h+'</h2><p class="rv">'+t.svc_p+'</p></div><div class="svc-grid">'+svc+'</div></div></section>\n'+
   '<section class="block" id="proces" style="background:var(--ink2)"><div class="wrap"><div class="sec-head"><h2 class="rv">'+t.proc_h+'</h2><p class="rv">'+t.proc_p+'</p></div><div class="proc">'+proc+'</div></div></section>\n'+
-  '<section class="maresme" id="maresme"><div class="wrap"><h2 class="rv">'+t.mar_h+'</h2><p class="rv">'+t.mar_p+'</p><div class="towns rv">'+towns+'</div></div></section>\n'+
-  '<section class="cta-final" id="contacte"><div class="glow" aria-hidden="true"></div><div class="wrap"><h2 class="rv">'+t.cta_h+'</h2><p class="rv">'+t.cta_p+'</p><div class="cta rv"><a href="https://wa.me/'+WA+'" class="btn btn-wa mag" data-cursor>'+WAICON+' '+t.wa+'</a><a href="mailto:'+EMAIL+'" class="btn btn-gold mag" data-cursor>'+t.cta_b1+'</a><a href="mailto:'+EMAIL+'" class="btn btn-ghost mag" data-cursor>'+EMAIL+'</a></div></div></section>\n'+
+  '<section class="maresme" id="maresme"><div class="wrap people-band"><div><h2 class="rv">'+t.mar_h+'</h2><p class="rv">'+t.mar_p+'</p><div class="towns rv">'+towns+'</div></div><img src="/team-barcelona.jpg" alt="People collaborating in a bright Barcelona studio" class="people-photo rv" loading="lazy" width="1536" height="1024"></div></section>\n'+
+  '<section class="cta-final" id="contacte"><div class="glow" aria-hidden="true"></div><div class="wrap"><h2 class="rv">'+t.cta_h+'</h2><p class="rv">'+t.cta_p+'</p><div class="cta rv"><a href="https://wa.me/'+WA+'" class="btn btn-wa mag" data-cursor>'+WAICON+' '+t.wa+'</a><a href="https://wa.me/'+WA+'" class="btn btn-gold mag" data-cursor target="_blank" rel="noopener">'+t.cta_b1+'</a><a href="mailto:'+EMAIL+'" class="btn btn-ghost mag" data-cursor>'+EMAIL+'</a></div></div></section>\n'+
   '</main>\n'+
   '<a class="wa-float" href="https://wa.me/'+WA+'" aria-label="WhatsApp '+WA_DISPLAY+'" target="_blank" rel="noopener">'+WAICON+'</a>\n'+
   '<footer><div class="wrap foot-in">'+
