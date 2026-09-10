@@ -16,15 +16,21 @@ const TOWNS = ['Barcelona','Madrid','París','Berlín','Amsterdam','Milà','Lisb
 const META = {
   en: {
     title: 'Technology Consulting across Europe | AI, Web, CRM & Marketing · Polar Consulting Group',
-    desc: 'Technology consulting across Europe. Expert in AI, web development, CRM, lead generation and marketing for businesses throughout Europe. Clear strategy, flawless execution and measurable results. Based in Barcelona, working remotely across the continent.'
+    desc: 'Technology consulting across Europe. Expert in AI, web development, CRM, lead generation and marketing for businesses throughout Europe. Clear strategy, flawless execution and measurable results. Based in Barcelona, working remotely across the continent.',
+    socialTitle: 'Polar Consulting Group · Human ideas, smart systems',
+    socialDesc: 'AI, web, CRM and growth for ambitious businesses across Europe.'
   },
   es: {
     title: 'Consultoría tecnológica en Europa | IA, Web, CRM y Marketing · Polar Consulting Group',
-    desc: 'Consultoría tecnológica en toda Europa. Experto en IA, desarrollo web, CRM, captación y marketing para empresas de toda Europa. Estrategia clara y resultados medibles. Con base en Barcelona, en remoto por todo el continente.'
+    desc: 'Consultoría tecnológica en toda Europa. Experto en IA, desarrollo web, CRM, captación y marketing para empresas de toda Europa. Estrategia clara y resultados medibles. Con base en Barcelona, en remoto por todo el continente.',
+    socialTitle: 'Polar Consulting Group · Ideas humanas, sistemas inteligentes',
+    socialDesc: 'IA, web, CRM y crecimiento para empresas ambiciosas en toda Europa.'
   },
   ca: {
     title: 'Consultoria tecnològica a Europa | IA, Web, CRM i Màrqueting · Polar Consulting Group',
-    desc: 'Consultoria tecnològica arreu d’Europa. Expert en IA, desenvolupament web, CRM, captació i màrqueting per a empreses d’arreu d’Europa. Estratègia clara i resultats mesurables. Amb base a Barcelona, en remot per tot el continent.'
+    desc: 'Consultoria tecnològica arreu d’Europa. Expert en IA, desenvolupament web, CRM, captació i màrqueting per a empreses d’arreu d’Europa. Estratègia clara i resultats mesurables. Amb base a Barcelona, en remot per tot el continent.',
+    socialTitle: 'Polar Consulting Group · Idees humanes, sistemes intel·ligents',
+    socialDesc: 'IA, web, CRM i creixement per a empreses ambicioses arreu d’Europa.'
   }
 };
 
@@ -272,7 +278,7 @@ const LIGHT_STYLE = `
   .btn{border-radius:999px;padding:13px 22px}.btn-gold{color:var(--ink);box-shadow:0 5px 0 var(--ink)}.btn-gold:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--ink)}
   .btn-ghost{border-color:var(--ink);color:var(--ink);background:rgba(255,255,255,.6)}
   .hero{min-height:auto;padding:132px 0 72px}.hero::after{display:none}.hero-in{padding:0;display:grid;gap:46px;align-items:center}
-  .hero-copy{position:relative;z-index:2}.hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(52px,8vw,108px);line-height:.92;letter-spacing:-.045em;margin-top:24px}.hero h1 .gold{color:var(--ink);position:relative;display:inline-block}.hero h1 .gold:after{content:"";position:absolute;left:-2%;right:-2%;bottom:.04em;height:.18em;background:var(--gold);z-index:-1;border-radius:10px;transform:rotate(-1deg)}
+  .hero-copy{position:relative;z-index:2}.hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(52px,8vw,108px);line-height:.92;letter-spacing:-.045em;margin-top:24px}.hero h1 .ln{overflow:visible;padding-bottom:.12em;margin-bottom:-.12em}.hero h1 .gold{color:var(--ink);position:relative;display:inline-block}.hero h1 .gold:after{content:"";position:absolute;left:-2%;right:-2%;bottom:.04em;height:.18em;background:var(--gold);z-index:-1;border-radius:10px;transform:rotate(-1deg)}
   .hero p.lead{color:var(--stone);font-size:18px;max-width:580px}.hero-visual{position:relative;min-height:430px}.hero-photo{width:100%;height:100%;min-height:430px;object-fit:cover;border-radius:42% 42% 18px 18px;box-shadow:18px 18px 0 var(--gold)}
   .hero-badge{position:absolute;left:-18px;bottom:28px;width:126px;height:126px;border-radius:50%;background:var(--coral);display:grid;place-items:center;text-align:center;font-size:13px;font-weight:800;line-height:1.25;transform:rotate(-8deg);border:3px solid var(--cream)}
   .ticker{background:var(--sky);border:0;padding:16px 0;transform:rotate(-1deg);width:102%;margin-left:-1%}.ticker-track span{color:var(--ink);font-weight:800}
@@ -283,7 +289,7 @@ const LIGHT_STYLE = `
   .cta-final{margin:30px 18px 70px;padding:90px 0;background:var(--gold);border-radius:34px}.cta-final p{color:var(--ink)}.cta-final .btn-gold{background:var(--ink);color:#fff;box-shadow:none}.cta-final .btn-ghost{background:transparent}.glow{display:none}
   footer{background:var(--ink);color:#fff;border:0}.foot-col,.foot-note,.foot-tag{color:#b9c4c1}.foot-img{filter:none}.wa-float{box-shadow:0 8px 24px rgba(24,49,45,.24)}
   @media(min-width:820px){.hero-in{grid-template-columns:1.05fr .95fr}.hero{padding:145px 0 92px}.hero-visual{height:600px}.hero-photo{min-height:600px}.people-band{grid-template-columns:.9fr 1.1fr}.cta-final{margin-left:32px;margin-right:32px}.step{padding:30px 25px}.proc{gap:14px}.sec-head{align-items:start}}
-  @media(max-width:819px){.hero h1 .ln i{transform:none!important}.hero-visual{order:-1;min-height:360px}.hero-photo{min-height:360px}.hero-badge{left:6px}.hero{padding-top:105px}.cta-final{margin-left:10px;margin-right:10px}.brand-img{height:23px}}
+  @media(max-width:819px){.hero-in{padding-left:22px;padding-right:22px;gap:62px}.hero h1 .ln i{transform:none!important}.hero-visual{order:-1;min-height:360px}.hero-photo{min-height:360px}.hero-badge{left:6px}.hero{padding-top:118px}.people-photo{display:none}.people-band{display:block}.cta-final{margin-left:10px;margin-right:10px}.brand-img{height:23px}}
 `;
 
 const SCRIPT = `
@@ -326,7 +332,7 @@ function ld(lang){
   const obj = {
     "@context":"https://schema.org","@type":"ProfessionalService",
     "name":"Polar Consulting Group","description":m.desc,"url":URLS[lang],
-    "email":EMAIL,"image":BASE+"/og-image.png","logo":BASE+"/logo.png","priceRange":"€€",
+    "email":EMAIL,"image":BASE+"/og-image-v2.jpg","logo":BASE+"/logo.png","priceRange":"€€",
     "inLanguage":lang,
     "areaServed":[{"@type":"Place","name":"Europe"},{"@type":"Country","name":"Spain"},{"@type":"Country","name":"France"},{"@type":"Country","name":"Germany"},{"@type":"Country","name":"Netherlands"},{"@type":"Country","name":"Italy"},{"@type":"Country","name":"Portugal"},{"@type":"Country","name":"Ireland"},{"@type":"Country","name":"United Kingdom"},{"@type":"Country","name":"Switzerland"}],
     "address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressRegion":"Catalunya","addressCountry":"ES"},
@@ -373,15 +379,16 @@ function page(lang){
   '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'+
   '<meta property="og:type" content="website">\n'+
   '<meta property="og:locale" content="'+OGLOC[lang]+'">\n'+
-  '<meta property="og:title" content="'+m.title+'">\n'+
-  '<meta property="og:description" content="'+m.desc+'">\n'+
+  '<meta property="og:title" content="'+m.socialTitle+'">\n'+
+  '<meta property="og:description" content="'+m.socialDesc+'">\n'+
   '<meta property="og:url" content="'+URLS[lang]+'">\n'+
   '<meta property="og:site_name" content="Polar Consulting Group">\n'+
-  '<meta property="og:image" content="'+BASE+'/og-image.png">\n'+
+  '<meta property="og:image" content="'+BASE+'/og-image-v2.jpg">\n'+
+  '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'+
   '<meta name="twitter:card" content="summary_large_image">\n'+
-  '<meta name="twitter:title" content="'+m.title+'">\n'+
-  '<meta name="twitter:description" content="'+m.desc+'">\n'+
-  '<meta name="twitter:image" content="'+BASE+'/og-image.png">\n'+
+  '<meta name="twitter:title" content="'+m.socialTitle+'">\n'+
+  '<meta name="twitter:description" content="'+m.socialDesc+'">\n'+
+  '<meta name="twitter:image" content="'+BASE+'/og-image-v2.jpg">\n'+
   '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'+
   '<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n'+
   '<script type="application/ld+json">'+ld(lang)+'</'+'script>\n'+
