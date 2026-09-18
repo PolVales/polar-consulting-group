@@ -392,7 +392,7 @@ function page(lang){
   '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'+
   '<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">\n'+
   '<script type="application/ld+json">'+ld(lang)+'</'+'script>\n'+
-  '<style>'+STYLE+LIGHT_STYLE+'</style>\n</head>\n<body>\n'+
+  '<style>'+STYLE+LIGHT_STYLE+'</style><link rel="stylesheet" href="/polar-3d.css">\n</head>\n<body>\n'+
   '<a href="#main" class="skip">'+t.skip+'</a>\n'+
   '<div id="progress"></div>\n<div id="cursor"></div>\n<div id="cursor-dot"></div>\n'+
   '<nav id="nav"><div class="wrap nav-in">'+
@@ -403,11 +403,11 @@ function page(lang){
       '<button class="menu-btn" id="menuBtn" aria-label="'+t.menu+'" aria-expanded="false"><span></span><span></span><span></span></button>'+
     '</div></div></nav>\n'+
   '<div id="mobile-menu">'+mLinks+'<a href="#contacte" class="btn btn-gold">'+t.navcta+'</a></div>\n'+
-  '<header class="hero" id="top"><canvas id="aurora" aria-hidden="true"></canvas>'+
+  '<header class="hero" id="top">'+
     '<div class="wrap hero-in"><div class="hero-copy"><p class="eyebrow rv">'+t.eyebrow+'</p>'+
     '<h1><span class="ln"><i>'+t.h1a+'</i></span><span class="ln"><i class="gold">'+t.h1b+'</i></span><span class="ln"><i>'+t.h1c+'</i></span></h1>'+
     '<p class="lead">'+t.lead+'</p>'+
-    '<div class="cta"><a href="#contacte" class="btn btn-gold mag" data-cursor>'+t.cta1+'</a><a href="#serveis" class="btn btn-ghost mag" data-cursor>'+t.cta2+'</a></div></div><div class="hero-visual"><img src="/team-barcelona.jpg" alt="A collaborative technology team working together in Barcelona" class="hero-photo" width="1536" height="1024"><div class="hero-badge">'+t.badge+'</div></div></div>'+
+    '<div class="cta"><a href="https://wa.me/'+WA+'" class="btn btn-gold" data-cursor>'+t.cta1+' ↗</a><a href="#serveis" class="btn btn-ghost" data-cursor>'+t.cta2+'</a></div></div><div class="hero-visual polar-scene" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="north-label">N / 41.38°</span><svg class="star-fallback" viewBox="0 0 400 400"><path fill="#F5CF00" d="M200 20 237 155 345 90 265 193 380 220 246 252 270 365 200 280 115 370 147 245 20 220 142 183 80 80 170 149Z"/><path fill="#fff8db" d="m200 20 0 200-120-140 90 69Z"/><path fill="#b49408" d="m200 220 70 145-24-113 134-32Z"/></svg><canvas id="polar-star"></canvas><span class="scene-caption">POLAR / CONSULTING GROUP</span><div class="hero-badge">'+t.badge+'</div></div></div>'+
     '<div class="scroll-hint" aria-hidden="true"><span>'+t.down+'</span><span class="bar"></span></div></header>\n'+
   '<div class="ticker" aria-hidden="true"><div class="ticker-track">'+ticker+'</div></div>\n'+
   '<main id="main">\n'+
@@ -422,7 +422,7 @@ function page(lang){
     '<div class="foot-col"><h5>'+t.foot_links+'</h5><a href="#serveis">'+t.nav[0]+'</a><a href="#proces">'+t.nav[1]+'</a><a href="#maresme">'+t.nav[2]+'</a><a href="#contacte">'+t.nav[3]+'</a></div>'+
     '<div class="foot-col"><h5>'+t.foot_contact+'</h5><a href="mailto:'+EMAIL+'" data-cursor>'+EMAIL+'</a><a href="'+BASE+'">polarconsultinggroup.com</a></div>'+
   '</div><div class="wrap foot-note">© 2026 Polar Consulting Group · '+t.foot_note+'</div></footer>\n'+
-  '<script>'+SCRIPT+'</'+'script>\n</body>\n</html>\n';
+  '<script src="/polar-3d.js" defer></'+'script>\n</body>\n</html>\n';
 }
 
 Object.keys(FILES).forEach(function(lang){ fs.writeFileSync(FILES[lang], page(lang)); console.log('wrote', FILES[lang]); });
